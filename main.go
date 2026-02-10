@@ -44,7 +44,7 @@ var (
 
 func (p Player) Cast(b Bait) Item{
 	totalPower := p.fishPower + b.power
-	fmt.Printf("Террарист закидывает: %s, Мастерство: %d\n", b.name, totalPower)
+	fmt.Printf("Игрок закидывает: %s, Мастерство: %d\n", b.name, totalPower)
 	roll := rand.Intn(100) + totalPower
 
 	if roll > 120 {
@@ -58,7 +58,7 @@ func main() {
 	p := Player{fishPower: 50}
 	b := Bait{name: "Нубская наживка", power: 40}
 
-	fmt.Println("Террарист начинает рыбалку")
+	fmt.Println("Игрок начинает рыбалку")
 
 	for i := 1; i <= 5; i++{
 		catch := p.Cast(b)
